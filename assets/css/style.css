@@ -1,0 +1,127 @@
+/* Basic reset-ish */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f7f4ed;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Overall layout */
+header {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #ddd;
+    background: #fffaf2;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    margin-top: 0.5rem;
+}
+
+nav a {
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+/* Main content wrapper */
+main {
+    max-width: 1100px;
+    margin: 2rem auto 4rem;
+    padding: 0 1.5rem;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #ddd;
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+    color: #555;
+    background: #fffaf2;
+}
+
+/* Homepage hero posters */
+.hero-posters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.hero-posters img.poster-large {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 4px solid #222;
+    box-shadow: 4px 4px 0 #222;
+}
+
+/* Article layout */
+.page {
+    display: flex;
+    gap: 2rem;
+}
+
+.sidebar {
+    flex: 0 0 260px;
+    position: sticky;
+    top: 1.5rem;
+    align-self: flex-start;
+}
+
+.sidebar img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #222;
+    box-shadow: 3px 3px 0 #222;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-caption {
+    font-size: 0.85rem;
+    color: #444;
+}
+
+.content {
+    flex: 1;
+}
+
+/* Typography */
+.content h1 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.content p {
+    margin: 0 0 1rem;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+    .page {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: static;
+        order: -1;
+    }
+}

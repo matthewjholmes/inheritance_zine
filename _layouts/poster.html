@@ -1,0 +1,85 @@
+---
+layout: default
+---
+
+<section class="poster-page">
+    <header class="poster-header">
+        <h1>{{ page.title }}</h1>
+
+        {% if page.subtitle %}
+        <p class="poster-subtitle">{{ page.subtitle }}</p>
+        {% endif %}
+
+        <dl class="poster-meta">
+            {% if page.artist %}
+            <div>
+                <dt>Artist</dt>
+                <dd>{{ page.artist }}</dd>
+            </div>
+            {% endif %}
+
+            {% if page.year %}
+            <div>
+                <dt>Date</dt>
+                <dd>{{ page.year }}</dd>
+            </div>
+            {% endif %}
+
+            {% if page.location %}
+            <div>
+                <dt>Location</dt>
+                <dd>{{ page.location }}</dd>
+            </div>
+            {% endif %}
+
+            {% if page.context %}
+            <div>
+                <dt>Context</dt>
+                <dd>{{ page.context }}</dd>
+            </div>
+            {% endif %}
+
+            {% if page.credit %}
+            <div>
+                <dt>Image credit</dt>
+                <dd>{{ page.credit }}</dd>
+            </div>
+            {% endif %}
+        </dl>
+    </header>
+
+    <div class="poster-layout">
+        <div class="poster-image">
+            <a href="{{ page.image | default: '' }}" target="_blank">
+                <img src="{{ page.image | default: '' }}" alt="{{ page.alt | default: page.title }}">
+            </a>
+            {% if page.image_note %}
+            <p class="poster-image-note">{{ page.image_note }}</p>
+            {% endif %}
+        </div>
+
+        <div class="poster-description">
+            {{ content }}
+        </div>
+    </div>
+
+    {% comment %}
+    Optional: list related articles that discuss this poster
+    {% endcomment %}
+    {% assign related_articles = site.pages
+    | where: "dir", "/articles/"
+    | where: "poster", page.poster_key %}
+
+    {% if related_articles and related_articles.size > 0 %}
+    <section class="poster-related">
+        <h2>Articles about this poster</h2>
+        <ul>
+            {% for article in related_articles %}
+            <li>
+                <a href="{{ article.url | relative_url }}">{{ article.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+</section>

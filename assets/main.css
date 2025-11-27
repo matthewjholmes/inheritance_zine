@@ -1,0 +1,477 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
+/* Basic reset-ish */
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Reset link appearance globally */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.article-byline {
+    margin: 0 0 0.4rem;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.article-byline a {
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.article-byline a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.8fr);
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.hero-text h2 {
+    font-family: "Merriweather", serif;
+    font-size: 1.6rem;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.hero-text p {
+    font-family: "Source Sans 3", sans-serif;
+    margin: 0;
+    max-width: 32rem;
+}
+
+.hero-poster {
+    margin: 0;
+    text-align: center;
+}
+
+.hero-poster figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* Article listing */
+.article-listing {
+    margin-top: 3rem;
+    font-family: "Source Sans 3", sans;
+}
+
+.article-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+
+.article-list-item {
+    margin-bottom: 0.5rem;
+}
+
+.article-list-item a {
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+.article-list-item a:hover {
+    border-bottom-color: currentColor;
+}
+
+.article-tag {
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.1rem 0.3rem;
+    border: 1px solid #222;
+}
+
+/* Article header */
+.article-header h1 {
+    font-family: "Merriweather", serif;
+    font-size: 2.2rem;
+    margin-bottom: 0.2rem;
+    text-shadow: 0.2rem 0.2rem 0.3rem #d4cfc4;
+}
+
+.article-subtitle {
+    margin: 0 0 0.4rem;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #444;
+}
+
+.article-meta {
+    margin: 0 0 1.5rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    color: #666;
+}
+
+/* Slightly narrower text column for readability */
+.content {
+    max-width: 42rem;
+}
+
+/* Simple drop cap for first paragraph */
+/* Drop cap only on the first paragraph *after* the header */
+/* Drop cap using initial-letter */
+.content>p:first-of-type::first-letter {
+    initial-letter: 3 2;
+    /* or 2, 3, 4 depending on desired height */
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    margin-right: 0.3rem;
+    opacity: 0.9;
+}
+
+/* VERSION BELOW WAS INITIAL ATTEMPT BUT KINDA FRAGILE */
+/* .content>p:first-of-type::first-letter {
+    margin-top: 0.5rem;
+    float: left;
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    line-height: 0.6;
+    padding-right: 0.2rem;
+    padding-top: 0.15rem;
+    font-weight: 600;
+} */
+
+/* Mobile tweak */
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("/assets/textures/noisy.png");
+    background-repeat: repeat;
+    background-size: auto;
+    opacity: 0.1;
+}
+
+body {
+    margin: 0;
+    font-family: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f7f4ed;
+    color: #222;
+    line-height: 1.6;
+
+}
+
+h3 {
+    font-family: "Merriweather", serif;
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* Overall layout */
+header {
+    padding: 1.5rem 2rem;
+    border-top: 1px solid #ddd;
+    background: #fffaf2;
+}
+
+header h1 {
+    font-family: "Merriweather", serif;
+    margin: 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-shadow: 0.2rem 0.2rem 0.3rem #d4cfc4;
+}
+
+header h3 {
+    font-family: "Merriweather", serif;
+    margin: 0;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    margin-top: 0.5rem;
+}
+
+nav a {
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+/* Main content wrapper */
+main {
+    max-width: 1100px;
+    margin: 2rem auto 4rem;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 2rem 2rem 3rem;
+    border: 1px solid #e3ded3;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+main p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #ddd;
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+    color: #555;
+    background: #fffaf2;
+}
+
+/* Homepage hero posters */
+.hero-posters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.hero-posters img.poster-large {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 4px solid #222;
+    box-shadow: 4px 4px 0 #222;
+}
+
+/* Article layout */
+.page {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.sidebar {
+    padding: 1rem;
+    background: #fffdf7;
+    border: 1px solid #e0d9cc;
+    border-radius: 4px;
+}
+
+.sidebar img {
+    display: block;
+    width: 100%;
+    border-radius: 2px;
+    border: 2px solid #222;
+}
+
+.sidebar-caption {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    color: #555;
+}
+
+.content {
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Typography */
+.content h1 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.content p {
+    font-size: 1.2rem;
+    margin: 0 0 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+    .page {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: static;
+        order: -1;
+    }
+}
+
+.contributor-profile h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+}
+
+.contributor-role,
+.contributor-pronouns {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.contributor-bio {
+    margin-top: 1.5rem;
+    max-width: 40rem;
+}
+
+.contributors-index h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contributors-intro {
+    max-width: 42rem;
+    margin-bottom: 2rem;
+}
+
+.contributors-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contributors-list-item {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.contributors-list-item a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.contributors-list-item a:hover {
+    text-decoration: underline;
+}
+
+.contributor-role-inline {
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.poster-page {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.poster-header h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+.poster-subtitle {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    font-style: italic;
+    color: #555;
+}
+
+.poster-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 0.5rem 1.5rem;
+    margin: 1rem 0 2rem;
+    padding: 0;
+}
+
+.poster-meta dt {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #777;
+}
+
+.poster-meta dd {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.poster-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.poster-image img {
+    max-width: 100%;
+    height: auto;
+    border: 4px solid #222;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
+    display: block;
+}
+
+.poster-image-note {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.poster-description {
+    max-width: 38rem;
+}
+
+.poster-related h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.poster-related ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.poster-related li {
+    margin-bottom: 0.4rem;
+}
+
+.poster-related a {
+    font-weight: 500;
+}
+
+/* Stack on small screens */
+@media (max-width: 768px) {
+    .poster-layout {
+        grid-template-columns: 1fr;
+    }
+}
