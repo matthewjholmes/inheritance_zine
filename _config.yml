@@ -22,8 +22,11 @@ title: The Inheritance of Happiness is a Warm Club
 email: inheritance@theinheritanceofhappinessisawarm.club
 description: >- # this means to ignore newlines until "baseurl:"
   The Inheritance is an online zine which explores the misuse of force by police against protesters from the 1960s to the 2020s, especially at San Francisco State.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+  url: 
+
+baseurl: "/inheritance_zine"
+url: "https://matthewjholmes.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+destination: _site
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
