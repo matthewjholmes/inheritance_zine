@@ -3,6 +3,9 @@ layout: contributor
 title: "Matt Holmes"
 role: "Student Contributor, Communicating Realness"
 pronouns: "he/him"
+
+headshot: "/assets/images/contributors/matt-head.png"
+headshot_alt: "Matt Holmes"
 ---
 
 Short bio here. A few sentences about who you are, your relationship to the course or campus,

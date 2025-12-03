@@ -13,7 +13,7 @@ context: "Created in the context of student organizing and protest around San Fr
 credit: "Source/collection info here (if required)"
 image_note: "Click the image to view a higher-resolution version."
 ---
-
+[This content AI generated filler text]:
 Write a short description or analysis of the poster here. This can include:
 
 - Visual details (color, composition, typography)

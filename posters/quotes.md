@@ -1,6 +1,6 @@
 ---
 layout: poster
-title: "Quotes Poster"
+title: "“Quotes” Poster"
 subtitle: "Contemporary protest poster"
 poster_key: quotes
 
@@ -13,7 +13,7 @@ context: "Created in the context of recent student protests and contemporary deb
 credit: "Source/collection info here (if required)"
 image_note: "Click the image to view a higher-resolution version."
 ---
-
+[This content AI generated filler text]:
 Write a short description or analysis of this contemporary poster here, focusing on:
 
 - How it visually contrasts with the historic poster

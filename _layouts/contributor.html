@@ -3,17 +3,35 @@ layout: default
 ---
 
 <section class="contributor-profile">
-    <h1>{{ page.title }}</h1>
+  <div class="contributor-layout">
+    <aside class="contrib-sidebar">
+      {% if page.headshot %}
+        <img
+          src="{{ page.headshot }}"
+          alt="{{ page.headshot_alt | default: page.title }}" />
+      {% endif %}
 
-    {% if page.role %}
-    <p class="contributor-role">{{ page.role }}</p>
-    {% endif %}
+      {% if page.headshot_credit %}
+        <p class="contrib-headshot-credit">
+          {{ page.headshot_credit }}
+        </p>
+      {% endif %}
+    </aside>
 
-    {% if page.pronouns %}
-    <p class="contributor-pronouns">{{ page.pronouns }}</p>
-    {% endif %}
+    <div class="contrib-main">
+      <h1>{{ page.title }}</h1>
 
-    <div class="contributor-bio">
+      {% if page.role %}
+        <p class="contributor-role">{{ page.role }}</p>
+      {% endif %}
+
+      {% if page.pronouns %}
+        <p class="contributor-pronouns">{{ page.pronouns }}</p>
+      {% endif %}
+
+      <div class="contributor-bio">
         {{ content }}
+      </div>
     </div>
+  </div>
 </section>

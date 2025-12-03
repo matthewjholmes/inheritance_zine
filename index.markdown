@@ -3,44 +3,69 @@ layout: default
 title: "Home"
 ---
 
-<section class="hero">
-  <div class="hero-text">
-    <h2>The Inheritance</h2>
-    <p>
-      An online zine exploring the misuse of force by police against protesters
-      from the 1960s to the 2020s, with a focus on San Francisco State.
-    </p>
-  </div>
-
-  <div class="hero-posters">
-    <figure class="hero-poster">
-      <a href="/assets/images/posters/happiness-club.jpg" target="_blank">
-        <img class="poster-large"
-             src="/assets/images/posters/happiness-club.jpg"
-             alt="'Happiness Club' protest poster">
-      </a>
-      <figcaption>“Happiness Club” protest poster</figcaption>
-    </figure>
-
-    <figure class="hero-poster">
-      <a href="/assets/images/posters/quotes_0.jpg" target="_blank">
-        <img class="poster-large"
-             src="/assets/images/posters/quotes_0.jpg"
-             alt="Modern protest poster (Quotes)">
-      </a>
-      <figcaption>Modern protest poster (Quotes)</figcaption>
-    </figure>
-  </div>
-</section>
-
 <section class="intro">
   <h3>About this zine</h3>
   <p>
+    [This content AI generated filler text]:
     Each article in this zine takes one of these posters as its focal point,
     reading it alongside moments of protest and police response.
     Together they trace what we inherit from earlier struggles—
     and what has, and has not, changed.
   </p>
+</section>
+
+<section class="hero">
+  <div class="poster-row">
+    <div class="poster-text">
+      <h3>“Happiness is a Warm Club”</h3>
+      <p>
+        [This content AI generated filler text]:
+        A historic protest poster associated with student organizing at San
+        Francisco State in the late 1960s. Articles in this zine read it
+        alongside the long arc of campus protest and state violence.
+      </p>
+      <p class="poster-inline-link">
+        <a href="{{ "/posters/happiness-club/" | relative_url }}">
+          Learn more about this item
+        </a>
+      </p>
+    </div>
+
+    <figure class="hero-poster">
+      <a href="{{ "/posters/happiness-club/" | relative_url }}">
+        <img class="poster-large"
+             src="/assets/images/posters/happiness-club.jpg"
+             alt="'Happiness Club' protest poster">
+      </a>
+      <figcaption>“Happiness is a Warm Club” Protest Poster</figcaption>
+    </figure>
+  </div>
+
+  <div class="poster-row">
+    <div class="poster-text">
+      <h3>“Quotes”</h3>
+      <p>
+        [This content AI generated filler text]:
+        A contemporary poster that reflects present-day student protest and
+        debates about policing and campus safety, while echoing earlier
+        struggles in form and language.
+      </p>
+      <p class="poster-inline-link">
+        <a href="{{ "/posters/quotes_0/" | relative_url }}">
+          Learn more about this item
+        </a>
+      </p>
+    </div>
+
+    <figure class="hero-poster">
+      <a href="{{ "/posters/quotes_0/" | relative_url }}">
+        <img class="poster-large"
+             src="/assets/images/posters/quotes_0.jpg"
+             alt="Modern protest poster (Quotes)">
+      </a>
+      <figcaption>“Quotes” Protest Poster</figcaption>
+    </figure>
+  </div>
 </section>
 
 <section class="article-listing">

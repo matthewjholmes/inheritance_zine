@@ -53,6 +53,46 @@ layout: default
 
     
         {{ content }}
+        
+        {% assign articles = site.pages
+        | where: "dir", "/articles/"
+        | sort: "title" %}
+        
+        {% assign current_index = nil %}
+        {% for p in articles %}
+        {% if p.url == page.url %}
+        {% assign current_index = forloop.index0 %}
+        {% endif %}
+        {% endfor %}
+        
+        {% if current_index != nil %}
+        {% assign prev_index = current_index | minus: 1 %}
+        {% assign next_index = current_index | plus: 1 %}
+        
+        {% assign prev_article = articles[prev_index] %}
+        {% assign next_article = articles[next_index] %}
+        
+        <nav class="article-nav">
+            {% if prev_article %}
+            <div class="article-nav-prev">
+                <span class="article-nav-label">Earlier</span><br>
+                <a href="{{ prev_article.url | relative_url }}">
+                    {{ prev_article.title }}
+                </a>
+            </div>
+            {% endif %}
+        
+            {% if next_article %}
+            <div class="article-nav-next">
+                <span class="article-nav-label">Later</span><br>
+                <a href="{{ next_article.url | relative_url }}">
+                    {{ next_article.title }}
+                </a>
+            </div>
+            {% endif %}
+        </nav>
+        {% endif %}
+        </div>
     </article>
 
 </div>
