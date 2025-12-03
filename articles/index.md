@@ -6,6 +6,7 @@ title: "Article Index"
 <section class="articles-index">
   <h2>Articles</h2>
   <p class="articles-intro">
+    [This content AI-generated filler text]
     The five essays in this zine each focus on a single protest poster—either the
     historical <em>Happiness Club</em> poster or the contemporary <em>Quotes</em> poster—and
     use them to reflect on the inheritance of protest, state power, and resistance.
