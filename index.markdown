@@ -25,7 +25,7 @@ title: "Home"
         alongside the long arc of campus protest and state violence.
       </p>
       <p class="poster-inline-link">
-        <a href="{{ "/posters/happiness-club/" | relative_url }}">
+        <a href="{{ '/posters/happiness-club/' | relative_url }}">
           Learn more about this item
         </a>
       </p>
@@ -34,7 +34,7 @@ title: "Home"
     <figure class="hero-poster">
       <a href="{{ "/posters/happiness-club/" | relative_url }}">
         <img class="poster-large"
-             src="/assets/images/posters/happiness-club.jpg"
+             src="{{ "/assets/images/posters/happiness-club-thumb.jpg" | relative_url }}"
              alt="'Happiness Club' protest poster">
       </a>
       <figcaption>“Happiness is a Warm Club” Protest Poster</figcaption>
@@ -51,16 +51,16 @@ title: "Home"
         struggles in form and language.
       </p>
       <p class="poster-inline-link">
-        <a href="{{ "/posters/quotes_0/" | relative_url }}">
+        <a href="{{ '/posters/quotes/' | relative_url }}">
           Learn more about this item
         </a>
       </p>
     </div>
 
     <figure class="hero-poster">
-      <a href="{{ "/posters/quotes_0/" | relative_url }}">
+      <a href="{{ "/posters/quotes/" | relative_url }}">
         <img class="poster-large"
-             src="/assets/images/posters/quotes_0.jpg"
+             src="{{ "/assets/images/posters/quotes.jpg" | relative_url }} "
              alt="Modern protest poster (Quotes)">
       </a>
       <figcaption>“Quotes” Protest Poster</figcaption>

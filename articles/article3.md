@@ -3,7 +3,7 @@ layout: article
 title: The Background of "Happiness is a Warm Club"
 subtitle: Where it got its name
 poster: happiness
-contributer: Aela Moore
+contributer: "Aela Moore"
 contributor_slug: aela
 ---
 

@@ -7,7 +7,7 @@ layout: default
     <aside class="contrib-sidebar">
       {% if page.headshot %}
         <img
-          src="{{ page.headshot }}"
+          src="{{ page.headshot | relative_url }}"
           alt="{{ page.headshot_alt | default: page.title }}" />
       {% endif %}
 
