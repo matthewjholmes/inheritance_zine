@@ -43,7 +43,7 @@ title: "Home"
 
   <div class="poster-row">
     <div class="poster-text">
-      <h3>“Quotes”</h3>
+      <h3><i>The Inheritance</i></h3>
       <p>
         [This content AI generated filler text]:
         A contemporary poster that reflects present-day student protest and
@@ -51,7 +51,7 @@ title: "Home"
         struggles in form and language.
       </p>
       <p class="poster-inline-link">
-        <a href="{{ '/posters/quotes/' | relative_url }}">
+        <a href="{{ '/posters/inheritance-poster/' | relative_url }}">
           Learn more about this item
         </a>
       </p>
@@ -60,10 +60,10 @@ title: "Home"
     <figure class="hero-poster">
       <a href="{{ "/posters/quotes/" | relative_url }}">
         <img class="poster-large"
-             src="{{ "/assets/images/posters/quotes.jpg" | relative_url }} "
-             alt="Modern protest poster (Quotes)">
+             src="{{ "/assets/images/posters/inheritance-poster.jpg" | relative_url }} "
+             alt="Contemporary protest poster (Inheritance)">
       </a>
-      <figcaption>“Quotes” Protest Poster</figcaption>
+      <figcaption></i>Inheritance</i> Protest Poster</figcaption>
     </figure>
   </div>
 </section>
