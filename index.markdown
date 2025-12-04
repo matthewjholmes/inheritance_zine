@@ -34,7 +34,7 @@ title: "Home"
     <figure class="hero-poster">
       <a href="{{ "/posters/happiness-club/" | relative_url }}">
         <img class="poster-large"
-             src="{{ "/assets/images/posters/happiness-club-thumb.jpg" | relative_url }}"
+             src="{{ "/assets/images/posters/happiness-club.jpg" | relative_url }}"
              alt="'Happiness Club' protest poster">
       </a>
       <figcaption>“Happiness is a Warm Club” Protest Poster</figcaption>
@@ -69,10 +69,31 @@ title: "Home"
 </section>
 
 <section class="article-listing">
+  <h3>Articles</h3>
+  <ul class="article-list">
+    {% assign article_pages = site.pages
+       | where: "dir", "/articles/"
+       | where_exp: "page", "page.url != '/articles/'"
+       | sort: "title" %}
+
+    {% for page in article_pages %}
+      <li class="article-list-item">
+        <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
+
+        {% if page.contributor %}
+          <span class="article-tag">By {{ page.contributor }}</span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<!-- <section class="article-listing">
   <h3>Read</h3>
   <ul class="article-list">
     {% assign article_pages = site.pages
        | where: "dir", "/articles/"
+       | where_exp: "page", "page.url != '/articles/'"
        | sort: "title" %}
 
     {% for page in article_pages %}
@@ -87,4 +108,4 @@ title: "Home"
       </li>
     {% endfor %}
   </ul>
-</section>
+</section> -->

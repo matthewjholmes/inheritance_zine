@@ -4,17 +4,30 @@ layout: default
 
 <section class="poster-page">
     <header class="poster-header">
-        <h1>{{ page.title }}</h1>
+        <h1><i>{{ page.title }}</i></h1>
 
         {% if page.subtitle %}
         <p class="poster-subtitle">{{ page.subtitle }}</p>
         {% endif %}
 
         <dl class="poster-meta">
-            {% if page.artist %}
+            {% if page.artists or page.artist %}
             <div>
-                <dt>Artist</dt>
-                <dd>{{ page.artist }}</dd>
+                <dt>
+                    {% if page.artists and page.artists.size > 1 %}
+                    Artists
+                    {% else %}
+                    Artist
+                    {% endif %}
+                </dt>
+
+                <dd>
+                    {% if page.artists %}
+                    {{ page.artists | join: ', ' }}
+                    {% else %}
+                    {{ page.artist }}
+                    {% endif %}
+                </dd>
             </div>
             {% endif %}
 
@@ -39,13 +52,26 @@ layout: default
             </div>
             {% endif %}
 
-            {% if page.credit %}
+            {% if page.credit_label %}
             <div>
                 <dt>Image credit</dt>
-                <dd>{{ page.credit }}</dd>
+            
+                {% if page.credit_url %}
+                <dd><a href="{{ page.credit_url }}">{{ page.credit_label }}</a></dd>
+                {% else %}
+                <dd>{{ page.credit_label }}</dd>
+                {% endif %}
+            
             </div>
             {% endif %}
-        </dl>
+
+            {% if page.media %}
+            <div>
+                <dt>Media</dt>
+                <dd>{{ page.media }}</dd>
+            </div>
+            {% endif %}
+</dl>
     </header>
 
     <div class="poster-layout">

@@ -1,22 +1,23 @@
 ---
 layout: poster
-title: "“Happiness Club” Poster"
+title: "Happiness is a Warm Club"
 subtitle: "Historic protest poster"
 poster_key: happiness
 
 image: "/assets/images/posters/happiness-club.jpg"
-alt: "Historic protest poster titled 'Happiness Club'"
-artist: "Unknown"
-year: "late 1960s"
+alt: "Historic protest poster titled 'Happiness is a Warm Club'"
+artists: 
+    - "Dennis Beall"
+year: "1968"
 location: "San Francisco State College"
-context: "Created in the context of student organizing and protest around San Francisco State in the late 1960s."
-credit: "Source/collection info here (if required)"
+context: "Created during police repression of student organizing and protest around San Francisco State in 1968 and 1969."
+credit_url: "https://magazine.sfsu.edu/archive/fall-2018/striking-images.html"
+credit_label: "Striking Images Collection,<br>Special Collections & Archives Unit of the<br>J. Paul Leonard Library, SFSU"
 image_note: "Click the image to view a higher-resolution version."
+media: "Screen Print"
 ---
-
-Write a short description or analysis of the poster here. This can include:
-
-- Visual details (color, composition, typography)
-- Historical context
-- How the language and imagery operate politically
-- How it connects to the themes of the zine
+<h4>Commentary courtesty of Kelsey Lansang</h4>
+- Bright, garish red background symbolizes violence, blood, and warmth.
+- Hand-lettered typography suggests a friendliness and playfulness, but the outline of “Happiness” gives an almost deranged feeling from the reverberation of the letters. There is significance in “Happiness” being the key word. There is emphasis but also the suggestion a false happiness. 
+- This is reinforced by the slight smirk on the officers face.
+- The officer is looking off in the distance, presumably at a human target, but is also looking at the club. The shape of the club being an indistinct, simple phallic shape may also allude to concepts of hyper-masculinity and a <i>boys club</i> common to police culture. 

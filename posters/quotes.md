@@ -1,7 +1,7 @@
 ---
 layout: poster
 title: "“Quotes” Poster"
-subtitle: "Contemporary protest poster"
+subtitle: "Historic protest poster"
 poster_key: quotes
 
 image: "/assets/images/posters/quotes_0.jpg"
