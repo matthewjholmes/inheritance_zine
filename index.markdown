@@ -12,6 +12,29 @@ title: "Home"
 
 <section class="hero">
   <div class="poster-row">
+    <figure class="hero-poster">
+      <a href="{{ '/posters/inheritance-poster.html' | relative_url }}">
+        <img class="poster-large"
+             src="{{ '/assets/images/posters/inheritance-poster.jpg' | relative_url }}"
+             alt="Contemporary protest poster (Inheritance)">
+      </a>
+      <figcaption><i>Inheritance</i> Protest Poster</figcaption>
+    </figure>
+
+    <div class="poster-text">
+      <h3>The Inheritance</h3>
+      <p>
+        This modern poster serves as an homage of design themes to <em>Happiness is a Warm Club</em>, while demonstrating the continuing phenomena of police misconduct.
+      </p>
+      <p class="poster-inline-link">
+        <a href="{{ '/posters/inheritance-poster.html' | relative_url }}">
+          Learn more about this item
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <div class="poster-row">
     <div class="poster-text">
       <h3>Happiness is a Warm Club</h3>
       <p>
@@ -25,35 +48,12 @@ title: "Home"
     </div>
 
     <figure class="hero-poster">
-      <a href="{{ "/posters/happiness-club.html" | relative_url }}">
+      <a href="{{ '/posters/happiness-club.html' | relative_url }}">
         <img class="poster-large"
-             src="{{ "/assets/images/posters/happiness-club.jpg" | relative_url }}"
+             src="{{ '/assets/images/posters/happiness-club.jpg' | relative_url }}"
              alt="Happiness Club protest poster">
       </a>
       <figcaption><i>Happiness is a Warm Club</i> Protest Poster</figcaption>
-    </figure>
-  </div>
-
-  <div class="poster-row">
-    <div class="poster-text">
-      <h3>The Inheritance</h3>
-      <p>
-        This modern poster serves as an homage of design themes to <em>Happiness is a Warm Club</em>, while demonstrating the continuing phenomena of police misconduct.
-      </p>
-      <p class="poster-inline-link">
-        <a href="{{ '/posters/inheritance-poster.html' | relative_url }}">
-          Learn more about this item
-        </a>
-      </p>
-    </div>
-
-    <figure class="hero-poster">
-      <a href="{{ '/posters/inheritance-poster.html' | relative_url }}">
-        <img class="poster-large"
-             src="{{ "/assets/images/posters/inheritance-poster.jpg" | relative_url }} "
-             alt="Contemporary protest poster (Inheritance)">
-      </a>
-      <figcaption><i>Inheritance</i> Protest Poster</figcaption>
     </figure>
   </div>
 </section>
