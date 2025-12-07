@@ -19,11 +19,13 @@ title: "Article Index"
       <li class="articles-list-item">
         <a href="{{ page.url | relative_url }}" class="article-title">{{ page.title }}</a>
 
-        {% if page.poster == "happiness" %}
+          <span class="article-contributor-tag">by {{ page.contributor }}</span>
+
+        <!-- {% if page.poster == "happiness" %}
           <span class="article-poster-tag tag-happiness">Happiness Club</span>
         {% elsif page.poster == "quotes" %}
           <span class="article-poster-tag tag-quotes">Quotes Poster</span>
-        {% endif %}
+        {% endif %} -->
       </li>
     {% endfor %}
   </ul>

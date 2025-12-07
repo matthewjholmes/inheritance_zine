@@ -118,44 +118,68 @@ layout: default
         {% endif %}
         
 
-        {% assign articles = site.pages
-        | where: "dir", "/articles/"
-        | sort: "title" %}
-        
-        {% assign current_index = nil %}
-        {% for p in articles %}
-        {% if p.url == page.url %}
-        {% assign current_index = forloop.index0 %}
-        {% endif %}
-        {% endfor %}
-        
-        {% if current_index != nil %}
-        {% assign prev_index = current_index | minus: 1 %}
-        {% assign next_index = current_index | plus: 1 %}
-        
-        {% assign prev_article = articles[prev_index] %}
-        {% assign next_article = articles[next_index] %}
-        
-        <nav class="article-nav">
-            {% if prev_article %}
-            <div class="article-nav-prev">
-                <span class="article-nav-label">Earlier</span><br>
-                <a href="{{ prev_article.url | relative_url }}">
-                    {{ prev_article.title }}
-                </a>
-            </div>
-            {% endif %}
-        
-            {% if next_article %}
-            <div class="article-nav-next">
-                <span class="article-nav-label">Later</span>
-                <a href="{{ next_article.url | relative_url }}">
-                    {{ next_article.title }}
-                </a>
-            </div>
-            {% endif %}
-        </nav>
-        {% endif %}
+                {%- comment -%}
+                Build the ordered list of article pages:
+                - Only files in /articles/
+                - Exclude the index page itself
+                - Sorted by title
+                {%- endcomment -%}
+                {% assign articles = site.pages
+                | where: "dir", "/articles/"
+                | where_exp: "p", "p.name != 'index.md'"
+                | sort: "title" %}
+                
+                {%- comment -%}
+                Find the current page's index in that list.
+                {%- endcomment -%}
+                {% assign current_index = nil %}
+                {% for p in articles %}
+                {% if p.url == page.url %}
+                {% assign current_index = forloop.index0 %}
+                {% endif %}
+                {% endfor %}
+                
+                {% assign article_count = articles | size %}
+                
+                {% if current_index != nil and article_count > 0 %}
+                {% assign last_index = article_count | minus: 1 %}
+                
+                {%- comment -%}
+                Circular "previous":
+                - Normally current_index - 1
+                - If we're at 0, wrap to last_index
+                {%- endcomment -%}
+                {% assign prev_index = current_index | minus: 1 %}
+                {% if prev_index < 0 %} {% assign prev_index=last_index %} {% endif %} {%- comment -%} Circular "next" : - Normally
+                    current_index + 1 - If we're at last_index, wrap to 0 {%- endcomment -%} {% assign next_index=current_index | plus:
+                    1 %} {% if next_index> last_index %}
+                    {% assign next_index = 0 %}
+                    {% endif %}
+                
+                    {% assign prev_article = articles[prev_index] %}
+                    {% assign next_article = articles[next_index] %}
+                
+                    <nav class="article-nav">
+                        {% if prev_article %}
+                        <div class="article-nav-prev">
+                            <span class="article-nav-label">Earlier</span><br>
+                            <a class="article-nav-link" href="{{ prev_article.url | relative_url }}">
+                                {{ prev_article.title }}
+                            </a>
+                        </div>
+                        {% endif %}
+                
+                        {% if next_article %}
+                        <div class="article-nav-next">
+                            <span class="article-nav-label">Later</span>
+                            <a class="article-nav-link" href="{{ next_article.url | relative_url }}">
+                                {{ next_article.title }}
+                            </a>
+                        </div>
+                        {% endif %}
+                    </nav>
+                    {% endif %}
+
         </div>
     </article>
 

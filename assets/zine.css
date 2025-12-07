@@ -125,12 +125,19 @@ nav {
     margin-top: 0.5rem;
 }
 
-nav a {
+header nav a {
     margin-right: 1rem;
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
 }
+/* 
+nav a {
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+} */
 
 /* Inner content panel */
 main {
@@ -271,6 +278,17 @@ img.poster-large {
 
 .article-list-item a {
     font-weight: 600;
+}
+
+/* Homepage “Articles” section: make titles more prominent */
+.article-listing .article-list-item a {
+    font-size: 1.1rem;
+    /* bigger than body text */
+    font-weight: 200;
+    /* keep them strong */
+    font-family: "Merriweather", serif;
+    display: inline-block;
+    margin-bottom: 0.1rem;
 }
 
 .article-tag {
@@ -780,21 +798,36 @@ img.poster-large {
     font-weight: 600;
 }
 
+/* Increase size of article navigation titles only */
+.article-nav a.article-nav-link {
+    font-size: 1.1rem;
+    /* adjust to taste */
+    font-weight: 600;
+    /* keep your strong look */
+    letter-spacing: 0.02em;
+    margin: 0;
+    /* preserve your spacing fix */
+}
+
+.article-nav-prev,
+.article-nav-next {
+    flex: 1;
+}
+
 .article-nav-prev {
     text-align: left;
 }
 
-/* .article-nav-next {
-    text-align: right;
-    max-width: fit-content;
-    margin-left: auto;
-} */
 .article-nav-next {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    /* right-align both lines */
+    flex: 1;
+    text-align: right;
 }
+
+.article-nav-next span,
+.article-nav-next a {
+    display: block;
+}
+
 
 /* Stack on small screens */
 @media (max-width: 768px) {
