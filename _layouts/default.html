@@ -30,8 +30,8 @@
                 <a href="{{ "/articles/" | relative_url }}">Articles</a>
                 <a href="{{ "/posters/" | relative_url }}">Posters</a>
                 <a href="{{ "/references/" | relative_url }}">References</a>
-                <a href="{{ "/resources/" | relative_url }}">Resources</a>
                 <a href="{{ "/contributors/" | relative_url }}">Contributors</a>
+                <a href="{{ "/resources/" | relative_url }}">Resources</a>
             </nav>
 
         </nav>
@@ -53,6 +53,9 @@
                 / {{ page.title }}
             </span>
 
+            {% elsif url == "/references/" %}
+            <span> / References</span>
+            
             {% elsif url contains "/references/" %}
             <span>
                 / <a href="{{ "/references/" | relative_url }}">References</a>
@@ -77,8 +80,6 @@
                 / {{ page.title }}
             </span>
 
-            {% elsif url == "/references/" %}
-            <span> / References</span>
 
             {% elsif url == "/resources/" %}
             <span> / Resources</span>

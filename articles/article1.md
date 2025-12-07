@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "The Gentile Strike Isn't"
-subtitle: "A protester injury by any other name would bleed just as quick"
+subtitle: "A protester injury by any other name would bleed just as free"
 poster: happiness
 contributor: "Matt Holmes"
 contributor_slug: matt
