@@ -31,6 +31,18 @@ body {
     line-height: 1.6;
 }
 
+/* restore color inheritance uniformly */
+header,
+.reference-page,
+.reference-header,
+.reference-content,
+.contributor-profile,
+.contributor-layout,
+.page,
+main {
+    color: #222;
+}
+
 /* Global headings: use Merriweather everywhere */
 h1,
 h2,
