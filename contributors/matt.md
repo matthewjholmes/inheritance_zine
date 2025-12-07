@@ -8,4 +8,4 @@ headshot_alt: "Matt Holmes"
 slug: matt
 ---
 
-I am a student of Public Health and Comparative & World at San Francisco State University.
+I am a student of Public Health and Comparative & World Literature at San Francisco State University.

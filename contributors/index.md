@@ -6,8 +6,7 @@ title: "Contributors"
 <section class="contributors-index">
   <h2>Contributors</h2>
   <p class="contributors-intro">
-    The essays in this zine were written by students in Africana Studies,
-    reflecting on protest, policing, and inheritance through two protest posters.
+    The essays in this zine were written by students in AFRS 120, reflecting on protest, policing, and the modern inheritance of an era of civil uprising.
   </p>
 
   <ul class="contributors-list">

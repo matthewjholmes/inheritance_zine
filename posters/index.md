@@ -6,8 +6,7 @@ title: "Posters"
 <section class="posters-index">
   <h2>Posters</h2>
   <p class="posters-intro">
-    These posters anchor the zine. Each one appears in multiple articles, as students
-    read them alongside protests, policing, and inheritance across decades.
+    These posters anchor this zine across time and topic.
   </p>
 
   <ul class="posters-list">
