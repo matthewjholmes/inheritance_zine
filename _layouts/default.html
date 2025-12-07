@@ -53,6 +53,12 @@
                 / {{ page.title }}
             </span>
 
+            {% elsif url contains "/references/" %}
+            <span>
+                / <a href="{{ "/references/" | relative_url }}">References</a>
+                / {{ page.title }}
+            </span>
+
             {% elsif url == "/posters/" %}
             <span> / Posters</span>
 

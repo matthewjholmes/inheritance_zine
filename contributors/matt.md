@@ -8,4 +8,4 @@ headshot: "/assets/images/contributors/matt-head.png"
 headshot_alt: "Matt Holmes"
 ---
 
-I am a student of Public Health and Comparative & World Literature at San Francisco State University.
+I am a student of Public Health and Comparative & World at San Francisco State University.

@@ -77,17 +77,28 @@ layout: default
                 {% if minutes_x2 <= 1 %} (less than 1 minute read) {% else %} ({{ minutes }}{% if half==1 %}.5{% endif
                     %} {% if minutes==1 and half==0 %} minute{% else %} minute{% endif %} read) {% endif %} </p>
         
-            <!-- <p class="article-meta">
-                {% if page.poster == "happiness" %}
-                    <span>On the “Happiness Club” poster</span>
-                {% elsif page.poster == "quotes" %}
-                    <span>On the Quotes poster</span>
-                {% endif %}
-            </p> -->
         </header>
 
     
         {{ content }}
+
+        {%- comment -%}
+        References link: right-aligned, subtle, based on refs_slug or refs_url.
+        {%- endcomment -%}
+        {% assign refs_url = nil %}
+        
+        {% if page.refs_slug %}
+        {% assign refs_url = "/references/" | append: page.refs_slug | append: ".html" %}
+        {% elsif page.refs_url %}
+        {% assign refs_url = page.refs_url %}
+        {% endif %}
+        
+        {% if refs_url %}
+        <p class="article-references-link">
+            <a href="{{ refs_url | relative_url }}">Works Cited</a>
+        </p>
+        {% endif %}
+        
 
         {% assign articles = site.pages
         | where: "dir", "/articles/"

@@ -2,19 +2,36 @@
 layout: default
 ---
 
+{%- comment -%}
+    Look up the related article by URL, if provided.
+{%- endcomment -%}
+{% assign related_article = nil %}
+
+{% if page.for_article_url %}
+    {% assign candidates = site.pages | where: "url", page.for_article_url %}
+    {% assign related_article = candidates | first %}
+{% endif %}
+
 <article class="reference-page">
     <header class="reference-header">
-        <h2>{{ page.title }}</h2>
+        <h2 class="references-title">Works Cited</h2>
 
-        {% if page.for_article_url %}
-        <p class="reference-for">
-            References for
+        {% if related_article or page.for_article_url %}
+        <h2 class="reference-for">
+            for
+            {% if related_article %}
+            <a href="{{ related_article.url | relative_url }}">
+                {{ related_article.title }}
+            </a>
+            {% else %}
             <a href="{{ page.for_article_url | relative_url }}">
                 {{ page.for_article_title | default: "this article" }}
             </a>
-        </p>
+            {% endif %}
+        </h2>
         {% endif %}
     </header>
+
 
     <div class="reference-content">
         {{ content }}

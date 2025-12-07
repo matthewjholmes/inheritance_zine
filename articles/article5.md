@@ -5,6 +5,7 @@ subtitle: Creating Systems for Justice and Accountability
 poster: inheritance
 contributor: "Isaac Jones III"
 contributor_slug: isaac
+refs_slug: article5refs
 ---
 
 When I think about police brutality in the context of the poster from the 1968 San Francisco
