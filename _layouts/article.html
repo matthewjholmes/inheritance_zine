@@ -35,6 +35,24 @@ layout: default
             {% endif %}
         
             {% if page.contributor %}
+            {% assign contributor_page = site.pages
+            | where: "layout", "contributor"
+            | where: "slug", page.contributor_slug
+            | first %}
+            
+            <p class="article-byline">
+                By
+                {% if contributor_page %}
+                <a href="{{ contributor_page.url | relative_url }}">
+                    {{ page.contributor }}
+                </a>
+                {% else %}
+                {{ page.contributor }}
+                {% endif %}
+            </p>
+            {% endif %}
+
+            <!-- {% if page.contributor %}
                 <p class="article-byline">
                     By
                         {% if page.contributor_slug %}
@@ -45,7 +63,7 @@ layout: default
                         {{ page.contributor }}
                         {% endif %}
                 </p>
-            {% endif %}
+            {% endif %} -->
 
             {%- comment -%}
             Word count + reading time (≈250 wpm), based on actual article content.

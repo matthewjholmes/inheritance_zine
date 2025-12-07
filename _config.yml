@@ -27,12 +27,6 @@ baseurl: ""
 url: "https://theinheritanceofthe.club/" # the base hostname & protocol for your site, e.g. http://example.com
 destination: _site
 
-collections:
-  contributors:
-    output: true
-    permalink: /contributors/:name/
-
-
 theme: minima
 
 # Where Jekyll outputs the site
