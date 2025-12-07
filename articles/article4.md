@@ -2,8 +2,8 @@
 layout: article
 title: Russia's Revanchist Ravage of Ukraine
 subtitle: Recalls Regan's Ruthless Repression
-poster: inheritance
-contributor: "Abner R. Lopez" 
+poster: happiness
+contributor: "Abner R. Lopez"
 contributor_slug: abner
 refs_slug: article4refs
 ---
