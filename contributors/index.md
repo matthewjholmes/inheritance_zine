@@ -18,7 +18,7 @@ title: "Contributors"
 
     {% for person in people %}
       <li class="contributors-list-item">
-        <a href="{{ person.permalink }}">{{ person.title }}</a>
+        <a href="{{ person.url | relative_url }}">{{ person.title }}</a>
         {% if person.role %}
           <span class="contributor-role-inline">{{ person.role }}</span>
         {% endif %}
