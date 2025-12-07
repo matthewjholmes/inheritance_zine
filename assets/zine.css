@@ -31,18 +31,6 @@ body {
     line-height: 1.6;
 }
 
-/* restore color inheritance uniformly */
-header,
-.reference-page,
-.reference-header,
-.reference-content,
-.contributor-profile,
-.contributor-layout,
-.page,
-main {
-    color: #222;
-}
-
 /* Global headings: use Merriweather everywhere */
 h1,
 h2,
@@ -788,4 +776,19 @@ img.poster-large {
     .article-nav-next {
         text-align: left;
     }
+}
+
+/* --- Hard reset all link colors everywhere --- */
+a,
+a:visited,
+a:active,
+a:hover,
+a:focus {
+    color: #222 !important;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
 }
