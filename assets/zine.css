@@ -792,3 +792,27 @@ a:hover,
 a:focus {
     text-decoration: underline;
 }
+
+/* Special styling for "for [article title]" on references pages */
+.reference-for {
+    color: #666;
+    /* base muted grey for the whole line */
+}
+
+.reference-for a,
+.reference-for a:visited {
+    color: #666 !important;
+    /* same muted grey as "for" */
+    text-decoration: none;
+    /* no underline by default */
+    transition: color 0.2s ease;
+    /* smooth-ish change */
+}
+
+.reference-for a:hover,
+.reference-for a:focus {
+    color: #222 !important;
+    /* pop back to normal heading color */
+    text-decoration: underline;
+    /* keeps your hover affordance */
+}
