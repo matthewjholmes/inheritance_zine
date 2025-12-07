@@ -1,7 +1,7 @@
 ---
 layout: contributor
 title: "Aela Moore"
-role: "Student Contributor, Communicating Realness"
+role: "Editorial Contributor"
 pronouns: "she/her"
 ---
 

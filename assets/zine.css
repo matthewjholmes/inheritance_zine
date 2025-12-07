@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
 
-
 /* -----------------------------
    Global reset & base styles
 ------------------------------ */
@@ -10,23 +9,24 @@
     box-sizing: border-box;
 }
 
-/* Grain overlay */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
     pointer-events: none;
-    background-image: url("textures/noisy.png");
+    background-image: url("/assets/textures/noisy.png");
     background-repeat: repeat;
     background-size: auto;
-    opacity: 0.1;
+    opacity: 0.22;
     z-index: 9999;
 }
 
+/* Outer background (under the texture) */
 body {
     margin: 0;
     font-family: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: #f7f4ed;
+    background-color: #f7f4ed;
+    /* soft cream */
     color: #222;
     line-height: 1.6;
 }
@@ -132,24 +132,54 @@ nav a {
     letter-spacing: 0.12em;
 }
 
-/* Main content wrapper */
+/* Inner content panel */
 main {
     max-width: 1100px;
     margin: 2rem auto 4rem;
-    background: rgba(255, 255, 255, 0.85);
+    background-color: #fffaf2;
+    /* slightly lighter warm paper */
     padding: 2rem 2rem 3rem;
-    border: 1px solid #e3ded3;
-    border-radius: 4px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    /* border: 1px solid #e3ded3; */
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 /* Footer */
 footer {
-    border-top: 1px solid #ddd;
-    padding: 1rem 2rem;
-    font-size: 0.8rem;
-    color: #555;
+    border-top: 1px solid #e0d9cc;
+    padding: 1.5rem 2rem;
     background: #fffaf2;
+    display: block;
+    width: 100%;
+    text-align: right !important;
+    /* FORCE right-alignment */
+}
+
+footer .tagline {
+    display: inline-block;
+    /* so alignment responds cleanly */
+    font-family: "Merriweather", serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.03em;
+    color: rgba(0, 0, 0, 0.32);
+    /* subtle, ghost-like */
+    opacity: 0.7;
+    /* gives a quiet, faded presence */
+    margin: 0;
+    transition: opacity 0.35s ease;
+    /* smooth reveal */
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.45);
+    /* blends into the paper */
+    pointer-events: auto;
+}
+
+/* Reveal effect on hover */
+footer .tagline:hover,
+footer .tagline:focus {
+    opacity: 1;
+    /* soft reveal */
+    color: rgba(0, 0, 0, 0.5);
+    /* still subtle, just clearer */
 }
 
 
@@ -266,7 +296,7 @@ img.poster-large {
 
 .sidebar {
     padding: 1rem;
-    background: #fffdf7;
+    background: ##fffaf2;
     border: 1px solid #e0d9cc;
     border-radius: 4px;
 }
@@ -295,6 +325,11 @@ img.poster-large {
     /* Uses global h1 settings (Merriweather, size, shadow) */
 }
 
+.article-header {
+    margin: 0;
+    padding: 2rem 0.2rem;
+}
+
 .article-subtitle {
     margin: 0 0 0.4rem;
     font-size: 1.05rem;
@@ -310,6 +345,14 @@ img.poster-large {
 
 .article-byline a {
     font-weight: 500;
+}
+
+.article-reading {
+    margin: 0 0 0.8rem;
+    font-size: 0.85rem;
+    color: #777;
+    text-align: right;
+    font-style: italic;
 }
 
 .article-meta {
@@ -610,8 +653,16 @@ img.poster-large {
     text-align: left;
 }
 
-.article-nav-next {
+/* .article-nav-next {
     text-align: right;
+    max-width: fit-content;
+    margin-left: auto;
+} */
+.article-nav-next {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* right-align both lines */
 }
 
 /* Stack on small screens */

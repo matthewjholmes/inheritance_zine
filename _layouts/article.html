@@ -7,15 +7,20 @@ layout: default
 
 {% if page.poster == "happiness" %}
 <a href="{{ '/posters/happiness-club/' | relative_url }}">
-    <img src="{{ '/assets/images/posters/happiness-club-thumb.jpg' | relative_url }}" alt="Protest poster titled 'Happiness Club'">
+    <img src="{{ '/assets/images/posters/happiness-club-thumb.jpg' | relative_url }}" alt="<Protest poster titled 'Happiness Club'>">
 </a>
-<p class="sidebar-caption">“Happiness Club” protest poster.</p>
+<p class="sidebar-caption">Historical protest poster <i>Happiness is a Warm Club</i>.</p>
 
 {% elsif page.poster == "quotes" %}
 <a href="{{ '/posters/quotes' | relative_url }}">
     <img src="{{ '/assets/images/posters/quotes-thumb.jpg' | relative_url }}" alt="Modern protest poster with quotes">
 </a>
-<p class="sidebar-caption">Modern protest poster (Quotes).</p>
+
+{% elsif page.poster == "inheritance" %}
+<a href="{{ '/posters/inheritance-poster' | relative_url }}">
+    <img src="{{ '/assets/images/posters/inheritance-poster-thumb.jpg' | relative_url }}" alt="Modern protest poster with inheritance-poster">
+</a>
+<p class="sidebar-caption">Modern protest poster <i>Inheritance</i>>.</p>
 {% endif %}
 
 
@@ -41,14 +46,44 @@ layout: default
                         {% endif %}
                 </p>
             {% endif %}
+
+            {%- comment -%}
+            Word count + reading time (≈250 wpm), based on actual article content.
+            {%- endcomment -%}
+            {% assign words = content
+            | strip_html
+            | strip_newlines
+            | replace: "&nbsp;", " "
+            | replace: " ", " "
+            | split: " "
+            | size %}
+            
+            {%- comment -%}
+            minutes_x2 is minutes * 2 in half-minute units, rounded up.
+            e.g. 566 words → 2.5 minutes, 742 words → 3 minutes.
+            {%- endcomment -%}
+            {% assign words_times2 = words | times: 2 %}
+            {% assign minutes_x2 = words_times2 | divided_by: 250 %}
+            {% assign remainder = words_times2 | modulo: 250 %}
+            {% if remainder > 0 %}
+            {% assign minutes_x2 = minutes_x2 | plus: 1 %}
+            {% endif %}
+            
+            {% assign minutes = minutes_x2 | divided_by: 2 %}
+            {% assign half = minutes_x2 | modulo: 2 %}
+            
+            <p class="article-reading">
+                {{ words }} words
+                {% if minutes_x2 <= 1 %} (less than 1 minute read) {% else %} ({{ minutes }}{% if half==1 %}.5{% endif
+                    %} {% if minutes==1 and half==0 %} minute{% else %} minute{% endif %} read) {% endif %} </p>
         
-            <p class="article-meta">
+            <!-- <p class="article-meta">
                 {% if page.poster == "happiness" %}
                     <span>On the “Happiness Club” poster</span>
                 {% elsif page.poster == "quotes" %}
                     <span>On the Quotes poster</span>
                 {% endif %}
-            </p>
+            </p> -->
         </header>
 
     
@@ -84,7 +119,7 @@ layout: default
         
             {% if next_article %}
             <div class="article-nav-next">
-                <span class="article-nav-label">Later</span><br>
+                <span class="article-nav-label">Later</span>
                 <a href="{{ next_article.url | relative_url }}">
                     {{ next_article.title }}
                 </a>

@@ -37,7 +37,7 @@ title: "Home"
              src="{{ "/assets/images/posters/happiness-club.jpg" | relative_url }}"
              alt="'Happiness Club' protest poster">
       </a>
-      <figcaption>“Happiness is a Warm Club” Protest Poster</figcaption>
+      <figcaption><i>Happiness is a Warm Club</i> Protest Poster</figcaption>
     </figure>
   </div>
 
@@ -63,7 +63,7 @@ title: "Home"
              src="{{ "/assets/images/posters/inheritance-poster.jpg" | relative_url }} "
              alt="Contemporary protest poster (Inheritance)">
       </a>
-      <figcaption></i>Inheritance</i> Protest Poster</figcaption>
+      <figcaption><i>Inheritance</i> Protest Poster</figcaption>
     </figure>
   </div>
 </section>
@@ -87,25 +87,3 @@ title: "Home"
     {% endfor %}
   </ul>
 </section>
-
-<!-- <section class="article-listing">
-  <h3>Read</h3>
-  <ul class="article-list">
-    {% assign article_pages = site.pages
-       | where: "dir", "/articles/"
-       | where_exp: "page", "page.url != '/articles/'"
-       | sort: "title" %}
-
-    {% for page in article_pages %}
-      <li class="article-list-item">
-        <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
-
-        {% if page.poster == "happiness" %}
-          <span class="article-tag">Happiness Club</span>
-        {% elsif page.poster == "quotes" %}
-          <span class="article-tag">Quotes poster</span>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-</section> -->

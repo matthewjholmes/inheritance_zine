@@ -1,22 +1,57 @@
 ---
 layout: article
-title: Crowd Events, Political Expression, and Police Presence
-poster: happiness
+title: Beyond Promises
+subtitle: Creating Systems for Justice and Accountability
+poster: inheritance
+contributor: "Isaac Jones III"
+contributor_slug: isaac
 ---
 
-[This content is AI generated filler text]:
-Large crowd events connected to political expression occur frequently in many societies, and they often include a noticeable police presence. These events can range from small community demonstrations to major national marches. Because they involve significant public activity, the question of how police should behave in these environments comes up regularly. As with other discussions surrounding protests and gatherings, opinions differ widely, and the debate tends to reappear whenever new events take place.
+When I think about police brutality in the context of the poster from the 1968 San Francisco
+State strike entitled “Happiness Is a Warm Club.” It’s poking fun at the police and is sort of a
+bitter joke, but also a warning. The student or students who made it weren’t only reacting to the
+personal violence of the club. They were calling out a system that had no way of being checked
+and was running rampant. A system without real accountability is one where a club can make
+someone feel power over another rather than responsibility for them. When I look at both the
+events of 1968 on campus and the countless cases from the last decade, I realize I am thinking
+less about the brutality alone and more about how we can stop and hold those accountable that
+are continuing the pain. How do we build real paths toward justice? What policies would actually
+make a difference?
 
-Organizers of political crowd events typically plan their activities in advance. They coordinate meeting points, prepare signs or speeches, and share details with participants. Police departments also prepare by assigning officers, surveying locations, and identifying areas where extra supervision might be needed. Most of these preparations are meant to ensure that the event runs smoothly. Still, some participants may view police planning as intrusive, especially if it involves road closures, barricades, or large numbers of officers stationed along the route.
+The 1968 strike showed how the police can escalate a situation in seconds and completely
+misrepresent the meaning of a protest. But it also showed that when communities demand
+accountability, even imperfectly, they create the pressure necessary for change. And that
+pressure is still needed. In 2020, when the George Floyd protests sprouted up across the country
+and New York’s Civil Complaint Review Board confirmed misconduct by more than 140 NYPD
+officers, it felt like another moment when the public could no longer pretend these were isolated
+incidents. I remember seeing video after video of clubs being used on people who were already
+backing up and not being violent, and pepper spray being used on these crowds that were no
+threat. These moments made me think about how there is no accountability for these actions and
+the only way for them to be investigated is internally. That in itself is how the “warm club” stays
+warm. When you are able to move unchecked, you continue the violence and abuse because you
+do not think there will be repercussions. One way to combat this and have some form of 
+accountability is to have an independent oversight committee with real disciplinary power, that
+doesn't just advise the police.
 
-During the event itself, the tone of the interaction between police and participants can shift based on circumstances. If the crowd remains calm, the police presence may feel minimal or even unnoticed. However, when emotions run high or when the crowd grows larger than expected, the relationship can become more complicated. Officers may issue instructions intended to guide movement or prevent congestion. Depending on how these instructions are interpreted, they can either help maintain order or create new frustrations for those attending.
+Daunte Wright’s killing in 2021in Brooklyn Center, Minnesota by officer Kimberly Potter
+showed another area where reform and accountability is needed. The lack of meaningful training
+and clear standards. A twenty-year-old died because an officer “mistook” her gun for a taser,
+something that should not even be possible in a system that is supposed to be centered on safety.
+The protests that followed were met with flash-bangs, tear gas, and impact rounds, showing once
+again how badly we need strict national standards for crowd-control weapons. “Less lethal”
+doesn’t mean less harmful. It often just means the harm is easier to justify.
 
-One of the most commonly discussed issues is the use of police authority during political crowd events. Situations involving arrests, physical restraint, or dispersal orders tend to draw significant attention. People who attend or observe these events may disagree about whether such actions were needed. Some argue that police interventions are excessive or ill-timed, while others believe they are an appropriate response to possible risks. These disagreements often persist long after the event, contributing to broader debates about policing and public expression.
+Across the 2020–2023 protests, nearly a thousand documented cases of police brutality revealed
+patterns we’ve seen for decades force used haphazardly, weapons brought to inflict pain and
+punishment rather than protect, and officers hiding badges to avoid accountability. Yet with all
+these issues, I don’t just see despair and no light at the end of the tunnel. I see opportunities for
+real change. When I look at 2020 and even now, I see a lot of similarities to 1968 and the issues
+occurring then, but I also see where we have improved and where we can do better. We can push
+for and demand independent oversight, clear national force standards, bans on dangerous crowdcontrol tools, mandatory transparency, and de-escalation training.
 
-Equipment used by police at these events also becomes a focal point. Items like helmets, riot shields, and mounted units can shape the atmosphere of a gathering, sometimes making it feel more tense than intended. Participants may interpret such equipment as a sign that authorities expect trouble, even if the police insist it is standard precautionary gear. This difference in perception adds another layer to the ongoing discussion about how police should present themselves when overseeing political assemblies.
-
-Public understanding of these interactions is heavily influenced by what is captured and shared through media sources. Videos, photographs, and short clips often highlight moments of conflict or intensity rather than ordinary, uneventful interactions. Because these images are widely distributed, they can shape impressions more strongly than official reports or detailed accounts. As a result, debates about police presence at political events sometimes revolve around isolated incidents rather than broader patterns.
-
-As with similar conversations, the topic of improvement is frequently addressed but rarely in concrete terms. Common suggestions focus on communication, training, and oversight. Advocates of reform claim that clearer expectations and better preparation would lead to fewer misunderstandings. Critics argue that these suggestions are vague and unlikely to produce major change. Despite these differing views, the same broad proposals continue to surface whenever discussions about police and political expression arise.
-
-In general, the presence of police at political crowd events remains a predictable source of debate. Because these events combine public expression, large groups, and varying interpretations of authority, disagreements about appropriate police behavior are almost inevitable. Though the same issues tend to be repeated, they continue to shape how people think about the relationship between policing and political activity. It is expected that as long as such events continue, these conversations will follow.
+The “Warm Club” poster captured a feeling of hopelessness at a time when police violence felt
+inevitable. But it also gives me hope because someone saw the issue and was not quiet, and also
+we’re not trapped in that moment. Each generation before and since has fought and added new
+tools, not weapons, but ideas for reshaping how policing works. And if we keep pushing for 
+policies rooted in humanity, accountability, and protection rather than power, then maybe
+someday the warm club poster will be a memory of what was and not what is.
