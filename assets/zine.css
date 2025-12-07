@@ -146,8 +146,8 @@ main {
 
 /* Footer */
 footer {
-    border-top: 1px solid #e0d9cc;
-    padding: 1.5rem 2rem;
+    /* border-top: 1px solid #e0d9cc; */
+    padding: 0rem 2rem;
     background: #fffaf2;
     display: block;
     width: 100%;
@@ -254,7 +254,8 @@ img.poster-large {
 
 /* Homepage article listing block */
 .article-listing {
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
+    padding-bottom: 1rem;
     border-bottom: 1px solid #ddd;
 }
 

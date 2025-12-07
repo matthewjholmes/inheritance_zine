@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<article class="reference-page">
+    <header class="reference-header">
+        <h2>{{ page.title }}</h2>
+
+        {% if page.for_article_url %}
+        <p class="reference-for">
+            References for
+            <a href="{{ page.for_article_url | relative_url }}">
+                {{ page.for_article_title | default: "this article" }}
+            </a>
+        </p>
+        {% endif %}
+    </header>
+
+    <div class="reference-content">
+        {{ content }}
+    </div>
+</article>
