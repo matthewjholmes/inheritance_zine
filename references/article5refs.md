@@ -31,4 +31,13 @@ for_article_title: "Your Article 5 Title Here"
     </a>
   </li>
 
+  <li>
+    “$150m Paid in Police Misconduct Claims Shows Violent Response to 2020 Protests, Experts Say.”
+    <em>The Guardian</em>, 25 May 2024,
+    <a href="https://www.theguardian.com/us-news/2024/may/25/police-misconduct-payment-2020-protest" target="_blank">
+      https://www.theguardian.com/us-news/2024/may/25/police-misconduct-payment-2020-protest.
+    </a>
+  </li>
+
+
 </ul>
