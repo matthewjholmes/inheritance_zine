@@ -7,7 +7,7 @@ title: "References"
   <h2>References</h2>
 
   <p class="references-intro">
-    Works cited pages for each article in <em>The Inheritance</em>.
+    For each article in <em>The Inheritance</em>.
   </p>
 
   <ul class="references-index-list">
