@@ -18,7 +18,8 @@ credit_label: "Striking Images Collection,<br>Special Collections & Archives Uni
 image_note: "Click the image to view a higher-resolution version."
 media: "Screen Print"
 ---
-<h4>Commentary courtesty of Kelsey Lansang</h4>
+
+<h4><i>Commentary courtesty of <a href="{{ '/contributors/kelsey.html' | relative_url }}">Kelsey Lansang</a></i></h4>
 - Bright, garish red background symbolizes violence, blood, and warmth.
 - Hand-lettered typography suggests a friendliness and playfulness, but the outline of “Happiness” gives an almost deranged feeling from the reverberation of the letters. There is significance in “Happiness” being the key word. There is emphasis but also the suggestion a false happiness. 
 - This is reinforced by the slight smirk on the officers face.

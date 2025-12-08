@@ -3,8 +3,8 @@ layout: contributor
 title: "Vivack Chan"
 role: "Graphic Design Contributor"
 pronouns: "he/him"
-headshot: "/assets/images/contributors/vivack-head.png"
-headshot_alt: "Vivack Chan"
+# headshot: "/assets/images/contributors/vivack-head.png"
+# headshot_alt: "Vivack Chan"
 slug: vivack
 ---
 
