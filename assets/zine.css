@@ -573,7 +573,7 @@ img.poster-large {
 .poster-subtitle {
     margin: 0 0 0.5rem;
     font-size: 1rem;
-    font-style: italic;
+    /* font-style: italic; */
     color: #555;
 }
 

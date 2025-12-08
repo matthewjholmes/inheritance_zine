@@ -7,7 +7,9 @@ poster_key: happiness
 image: "/assets/images/posters/happiness-club.jpg"
 alt: "Historic protest poster titled 'Happiness is a Warm Club'"
 artists: 
-    - "Dennis Beall"
+    - name: "Dennis Beall"
+      slug: dennis
+
 year: "1968"
 location: "San Francisco State College"
 context: "Created during police repression of student organizing and protest around San Francisco State in 1968 and 1969."

@@ -7,10 +7,14 @@ poster_key: inheritance
 image: "/assets/images/posters/inheritance-poster.jpg"
 alt: "Modern protest poster titled 'Inheritance'"
 artists: 
-    - "Kelsey Lansang"
-    - "Nicholas Alan Lee"
-    - "<br>Vivack Chan"
-    - "Julio Enrique Pineda Martinez"
+    - name: "Kelsey Lansang"
+      slug: kelsey
+    - name: "Nicholas Alan Lee"
+      slug: nicholas
+    - name: "<br>Vivack Chan"
+      slug: vivack
+    - name: "Julio Enrique Pineda Martinez"
+      slug: julio
 year: "2025"
 location: "San Francisco State University"
 context: "Created specifically for this collaboration."
