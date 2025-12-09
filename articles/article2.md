@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "America’s Dormant Inequality Awakens"
+title: "America’s Dormant Inequality"
 subtitle: One image can shout a thousand words.
 poster: happiness
 contributor: "Jaime Valencia-Cervantes"

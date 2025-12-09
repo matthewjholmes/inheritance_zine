@@ -841,6 +841,94 @@ img.poster-large {
     }
 }
 
+/* Resources index (/resources/) — match Posters & References styling */
+
+.resources-index {
+    max-width: 42rem;
+    margin: 0 auto 2rem;
+    /* same width and bottom spacing */
+}
+
+.resources-intro {
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+    color: #444;
+    /* same soft intro text style */
+}
+
+.resources-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.resources-list-item {
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #ddd;
+    /* identical divider line */
+}
+
+/* Title matches poster index, references index, article index */
+.resource-title {
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: "Merriweather", serif;
+    display: inline-block;
+    margin-bottom: 0.1rem;
+}
+
+/* Inline subtitle/meta, identical to poster and historical-posters subtitle styling */
+.resource-subtitle-inline {
+    margin-left: 0.5rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Historical Posters index (/resources/historical-posters/) */
+
+.historical-posters-index {
+    max-width: 42rem;
+    margin: 0 auto 2rem;
+    /* same width + bottom spacing as other indexes */
+}
+
+.historical-posters-intro {
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+    color: #444;
+}
+
+.historical-posters-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Match /posters and /references item rhythm */
+.historical-posters-item {
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Title styling like other index titles */
+.historical-poster-title {
+    font-weight: 600;
+    font-size: 1rem;
+    /* same ballpark as .poster-title / .article-title */
+    font-family: "Merriweather", serif;
+}
+
+/* Inline meta like subtitle/role on other indexes */
+.historical-poster-meta {
+    margin-left: 0.5rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+}
+
 /* --- Hard reset all link colors everywhere --- */
 a,
 a:visited,

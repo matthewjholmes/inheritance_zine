@@ -4,7 +4,7 @@ title: "Those Who Make Peaceful Revolution Impossible Make Violent Revolution In
 subtitle: "Historic protest poster"
 poster_key: peaceful-rev
 
-image: "/assets/images/posters/peaceful-rev.png"
+image: "/assets/images/historical-posters/peaceful-rev.png"
 alt: "Historic protest poster titled 'Those Who Make Peaceful Revolution Impossible Make Violent Revolution Inevitable'"
 artists: 
     - name: "Howard Levine"

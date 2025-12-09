@@ -4,7 +4,7 @@ title: "I Am My Brother's Keeper"
 subtitle: "Historic protest poster"
 poster_key: brothers-keeper
 
-image: "/assets/images/posters/brothers-keeper.png"
+image: "/assets/images/historical-posters/brothers-keeper.png"
 alt: "Historic protest poster titled 'I Am My Brother's Keeper'"
 artists: 
     - name: "unknown"

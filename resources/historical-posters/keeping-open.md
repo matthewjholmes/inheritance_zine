@@ -4,7 +4,7 @@ title: "Keeping Open"
 subtitle: "Historic protest poster"
 poster_key: keeping-open
 
-image: "/assets/images/posters/keeping-open.png"
+image: "/assets/images/historical-posters/keeping-open.png"
 alt: "Historic protest poster titled 'Keeping Open'"
 artists: 
     - name: "Dennis Beall"

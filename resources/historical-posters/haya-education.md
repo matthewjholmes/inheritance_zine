@@ -4,7 +4,7 @@ title: "Haya Education"
 subtitle: "Historic protest poster"
 poster_key: haya-education
 
-image: "/assets/images/posters/haya-education.png"
+image: "/assets/images/historical-posters/haya-education.png"
 alt: "Historic protest poster titled 'Haya Education'"
 artists: 
     - name: "unknown"

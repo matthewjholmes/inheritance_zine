@@ -4,7 +4,7 @@ title: "Alma Mater"
 subtitle: "Historic protest poster"
 poster_key: alma-mater
 
-image: "/assets/images/posters/alma-mater.png"
+image: "/assets/images/historical-posters/alma-mater.png"
 alt: "Historic protest poster titled 'Alma Mater'"
 artists: 
     - name: "Linda Johnson"

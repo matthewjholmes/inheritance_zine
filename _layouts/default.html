@@ -65,6 +65,31 @@
             {% elsif url == "/posters/" %}
             <span> / Posters</span>
 
+            {% elsif url == "/resources/" %}
+            <span> / Resources</span>
+
+            {% elsif url contains "/resources/" %}
+            <span>
+                / <a href="{{ "/resources/" | relative_url }}">Resources</a>
+                / {{ page.title }}
+            </span>
+
+            {% elsif url == "/resources/historical-posters/" %}
+            <span> / Historical Posters</span>
+
+            {% elsif url contains "/resources/historical-posters" %}
+            <span>
+                / <a href="{{ " /resources/" | relative_url }}">Resources</a>
+                / {{ page.title }}
+            </span>
+            <span>
+                / <a href="{{ " /resources/historical-posters" | relative_url }}">Historical Posters</a>
+                / {{ page.title }}
+            </span>
+
+            {% elsif url == "/resources/online-repositories/" %}
+            <span> / Online Repositories</span>
+
             {% elsif url contains "/posters/" %}
             <span>
                 / <a href="{{ "/posters/" | relative_url }}">Posters</a>
