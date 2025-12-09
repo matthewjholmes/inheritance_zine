@@ -8,4 +8,4 @@ Let's just call this page a little Easter egg that may or may not be an artifact
 
 But I don't like failing at stuff and so in some ways this website was really guilding the lily for the requirements of the class, but it was a low-stakes way for me to redeem the practicality of my nascent programming skills. I don't claim that the actual academic content that the contributors submitted is especially groundbreaking stuff, but overall, I think this is a pretty decent portfolio site for a 100-level class.
 
-mjh/9dec25
+<strong>mjh / 9dec25</strong>
