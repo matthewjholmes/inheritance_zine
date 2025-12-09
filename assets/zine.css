@@ -131,6 +131,7 @@ header nav a {
     text-transform: uppercase;
     letter-spacing: 0.12em;
 }
+
 /* 
 nav a {
     margin-right: 1rem;
@@ -942,4 +943,17 @@ a:focus {
 a:hover,
 a:focus {
     text-decoration: underline;
+}
+
+nav a.nav-invisible,
+nav a.nav-invisible:visited,
+nav a.nav-invisible:active {
+    color: #fffaf2 !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a.nav-invisible:hover,
+nav a.nav-invisible:focus {
+    color: #e6dfd2 !important;
 }

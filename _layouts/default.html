@@ -32,6 +32,8 @@
                 <a href="{{ "/references/" | relative_url }}">References</a>
                 <a href="{{ "/contributors/" | relative_url }}">Contributors</a>
                 <a href="{{ "/resources/" | relative_url }}">Resources</a>
+                <!-- Invisible About link -->
+                <a href="{{ '/about/' | relative_url }}" class="nav-invisible">About</a>
             </nav>
 
         </nav>
@@ -67,6 +69,32 @@
 
             {% elsif url == "/resources/" %}
             <span> / Resources</span>
+
+            {% elsif url == "/resources/historical-posters/" %}
+            <span>
+                / <a href="{{ "/resources/" | relative_url }}">Resources</a>
+                / Historical Posters
+            </span>
+
+            {% elsif url contains "/resources/historical-posters/" %}
+            <span>
+                / <a href="{{ "/resources/" | relative_url }}">Resources</a>
+                / <a href="{{ "/resources/historical-posters/" | relative_url }}">Historical Posters</a>
+                / {{ page.title }}
+            </span>
+
+            {% elsif url == "/resources/online-repositories/" %}
+            <span>
+                / <a href="{{ "/resources/" | relative_url }}">Resources</a>
+                / Online Repositories
+            </span>
+
+            {% elsif url contains "/resources/online-repositories/" %}
+            <span>
+                / <a href="{{ "/resources/" | relative_url }}">Resources</a>
+                / <a href="{{ "/resources/online-repositories/" | relative_url }}">Online Repositories</a>
+                / {{ page.title }}
+            </span>
 
             {% elsif url contains "/resources/" %}
             <span>

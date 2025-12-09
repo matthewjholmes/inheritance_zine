@@ -4,15 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Let's just call this page a little Easter egg that may or may not be an artifact of the Jekyll infrastructure. Creating this website has been, in turns, fun and frustrating. While this project was ongoing, I was busy deciding that a Computer Science degree really wasn't a good fit for me. I was having a hellish time in Calculus, and decided to transfer to Public Health. I do think that'll be a better fit for me.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+But I don't like failing at stuff and so in some ways this website was really guilding the lily for the requirements of the class, but it was a low-stakes way for me to redeem the practicality of my nascent programming skills. I don't claim that the actual academic content that the contributors submitted is especially groundbreaking stuff, but overall, I think this is a pretty decent portfolio site for a 100-level class.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+mjh/9dec25
