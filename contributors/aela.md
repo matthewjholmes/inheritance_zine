@@ -6,4 +6,4 @@ pronouns: "she/her"
 slug: aela
 ---
 
-I am a student of MAJOR at San Francisco State University.
+I am a first year student at SF State majoring in Nursing.
