@@ -3,8 +3,8 @@ layout: contributor
 title: "Nicholas Alan Lee"
 role: "Graphic Design Contributor"
 pronouns: "he/him"
-# headshot: "/assets/images/contributors/nicholas-head.png"
-# headshot_alt: "Nicholas Alan Lee"
+headshot: "/assets/images/contributors/nicholas-head.png"
+headshot_alt: "Nicholas Alan Lee"
 slug: nicholas
 ---
 
