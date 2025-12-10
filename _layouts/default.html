@@ -49,6 +49,9 @@
             {% if url == "/articles/" %}
             <span> / Articles</span>
 
+            {% elsif url == "/about/" %}
+            <span> / About</span>
+
             {% elsif url contains "/articles/" %}
             <span>
                 / <a href="{{ "/articles/" | relative_url }}">Articles</a>
