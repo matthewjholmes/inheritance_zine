@@ -601,6 +601,39 @@ img.poster-large {
     display: block;
 }
 
+/* Resources sub-index pages (/resources/...) */
+.resources-subindex {
+    max-width: 42rem;
+    margin: 0 auto 2rem;
+}
+
+.resources-subindex-intro {
+    margin-bottom: 1.5rem;
+}
+
+.resources-subindex-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.resources-subindex-item {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.resource-subindex-title {
+    font-weight: 600;
+}
+
+.resource-subindex-note {
+    margin-left: 0.5rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+}
+
 /* Mobile stacking */
 @media (max-width: 768px) {
     .contributor-nav {
