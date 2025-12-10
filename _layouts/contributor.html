@@ -34,4 +34,56 @@ layout: default
       </div>
     </div>
   </div>
+
+  {%- comment -%}
+  Contributor navigation (previous / next, circular)
+  {%- endcomment -%}
+  
+  {% assign contributors = site.pages
+  | where: "dir", "/contributors/"
+  | where_exp: "p", "p.name != 'index.md'"
+  | sort: "title" %}
+  
+  {% assign current_index = nil %}
+  {% for c in contributors %}
+  {% if c.url == page.url %}
+  {% assign current_index = forloop.index0 %}
+  {% endif %}
+  {% endfor %}
+  
+  {% assign count = contributors | size %}
+  {% assign last_index = count | minus: 1 %}
+  
+  {% if current_index != nil %}
+  
+  {%- comment -%}
+  Circular previous
+  {%- endcomment -%}
+  {% assign prev_index = current_index | minus: 1 %}
+  {% if prev_index < 0 %} {% assign prev_index=last_index %} {% endif %} {%- comment -%} Circular next {%- endcomment -%}
+    {% assign next_index=current_index | plus: 1 %} {% if next_index> last_index %}
+    {% assign next_index = 0 %}
+    {% endif %}
+  
+    {% assign prev_contrib = contributors[prev_index] %}
+    {% assign next_contrib = contributors[next_index] %}
+  
+    <nav class="contributor-nav">
+      <div class="contributor-nav-prev">
+        <span class="contributor-nav-label">Previous</span>
+        <a class="contributor-nav-link" href="{{ prev_contrib.url | relative_url }}">
+          {{ prev_contrib.title }}
+        </a>
+      </div>
+  
+      <div class="contributor-nav-next">
+        <span class="contributor-nav-label">Next</span>
+        <a class="contributor-nav-link" href="{{ next_contrib.url | relative_url }}">
+          {{ next_contrib.title }}
+        </a>
+      </div>
+    </nav>
+  
+    {% endif %}
+
 </section>

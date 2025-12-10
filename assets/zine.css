@@ -557,6 +557,62 @@ img.poster-large {
     max-width: 40rem;
 }
 
+/* Contributor navigation (bottom of contributor profile) */
+
+.contributor-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.contributor-nav-prev,
+.contributor-nav-next {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contributor-nav-prev {
+    text-align: left;
+    align-items: flex-start;
+}
+
+.contributor-nav-next {
+    text-align: right;
+    align-items: flex-end;
+}
+
+.contributor-nav-label {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.75rem;
+    color: #888;
+    margin-bottom: 0.15rem;
+}
+
+.contributor-nav-link {
+    font-weight: 600;
+    display: block;
+}
+
+/* Mobile stacking */
+@media (max-width: 768px) {
+    .contributor-nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contributor-nav-next {
+        text-align: left;
+        align-items: flex-start;
+    }
+}
 
 /* -----------------------------
    Posters pages (/posters/)
