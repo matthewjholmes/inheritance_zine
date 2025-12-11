@@ -2,6 +2,8 @@
 layout: contributor
 title: "Abner R. Lopez"
 role: "Editorial Contributor"
+headshot: "/assets/images/contributors/abner-head.png"
+headshot_alt: "Abner R. Lopez"
 pronouns: "he/his"
 slug: abner
 ---
