@@ -4,27 +4,12 @@ layout: default
 
 <div class="page">
     <aside class="sidebar">
-
-{% if page.poster == "happiness" %}
-<a href="{{ '/posters/happiness-club/' | relative_url }}">
-    <img src="{{ '/assets/images/posters/happiness-club-thumb.jpg' | relative_url }}" alt="<Protest poster titled 'Happiness Club'>">
-</a>
-<p class="sidebar-caption">Historical protest poster <i>Happiness is a Warm Club</i>.</p>
-
-{% elsif page.poster == "quotes" %}
-<a href="{{ '/posters/quotes' | relative_url }}">
-    <img src="{{ '/assets/images/posters/quotes-thumb.jpg' | relative_url }}" alt="Modern protest poster with quotes">
-</a>
-
-{% elsif page.poster == "inheritance" %}
-<a href="{{ '/posters/inheritance-poster' | relative_url }}">
-    <img src="{{ '/assets/images/posters/inheritance-poster-thumb.jpg' | relative_url }}" alt="Modern protest poster with inheritance-poster">
-</a>
-<p class="sidebar-caption">Modern protest poster <i>Inheritance</i>>.</p>
-{% endif %}
-
-
+        <div class="sidebar-photos"></div>
     </aside>
+
+    <article class="content">
+        <!-- everything else in your article layout stays the same -->
+
 
     <article class="content">
         <header class="article-header">
@@ -181,6 +166,137 @@ layout: default
                     {% endif %}
 
         </div>
+            <!-- existing article nav etc. stays above here -->
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const sidebar = document.querySelector('.sidebar-photos');
+                    const content = document.querySelector('.content');
+
+                    if (!sidebar || !content) return;
+
+                    // --- Image pools ---
+
+                    // First image must be one of these posters:
+                    const posterImages = [
+                        {
+                            src: "{{ '/assets/images/posters/happiness-club-thumb.jpg' | relative_url }}",
+                            alt: "Historic protest poster: Happiness is a Warm Club"
+                        },
+                        {
+                            src: "{{ '/assets/images/posters/inheritance-poster-thumb.jpg' | relative_url }}",
+                            alt: "Modern protest poster: Inheritance"
+                        }
+                    ];
+
+                    // All other images can be drawn from historical posters + historical photos
+                    const photoImages = [
+                        // historical-posters (add paths you actually have here)
+                        {
+                            src: "{{ '/assets/images/historical-posters/happiness-club.jpg' | relative_url }}",
+                            alt: "Historical protest poster"
+                        },
+                        {
+                            src: "{{ '/assets/images/historical-posters/inheritance-poster.jpg' | relative_url }}",
+                            alt: "Contemporary protest poster"
+                        },
+
+                        // historical-photos (from your list)
+                        { src: "{{ '/assets/images/historical-photos/17000_students_support_police.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/admin_bldg_sit_in.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/aft_picket_line.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/aft_pickets.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/arrested_and_bloodied.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/back_to_skool_picket.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/bearded_man.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/bloody_tuesday_head.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/cafeteria_banners.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/cafeteria_banners2.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/calif_republic_flag.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/crowds_marching.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/gagged_guitar.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/girl_cry.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/hari_dillon.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/kay_boyle.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/medic_tripped.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/medical_vols.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/medical_vols2.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/medical_vols3.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/medical_vols4.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/mounted_police.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/negociate_pickets.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/no_police_state_picket.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/onlookers.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/pd_revolver.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/peace_street_light.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/pickelhaube.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/police_column.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/police_ground_fight.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/police_line.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/police_line_cafeteria.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/police_pin_ground.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/press_interview.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/press_interview2.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/pulled_apart.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/riot_gear.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/riot_police.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/speakers_platform_crowd.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/speakers_platform_crowd2.png' | relative_url }}", alt: "Historical protest photo" },
+                        { src: "{{ '/assets/images/historical-photos/strike_daily_ed1.png' | relative_url }}", alt: "Historical protest photo" }
+                    ];
+
+                    // --- Decide how many images based on article height ---
+
+                    const contentRect = content.getBoundingClientRect();
+                    const contentHeight = contentRect.height;
+
+                    // Approximate each image block as ~220px tall (image + margins)
+                    const approxPerImage = 220;
+
+                    let imageCount = Math.round(contentHeight / approxPerImage);
+
+                    // Clamp to a reasonable range
+                    if (imageCount < 2) imageCount = 2;
+                    if (imageCount > 10) imageCount = 10;
+
+                    // --- Helper for random selection ---
+                    function pickRandom(array) {
+                        return array[Math.floor(Math.random() * array.length)];
+                    }
+
+                    // Make a mutable copy so we don't repeat too much
+                    const availablePhotos = photoImages.slice();
+                    const chosen = [];
+
+                    // 1) First image: random poster
+                    const firstPoster = pickRandom(posterImages);
+                    chosen.push(firstPoster);
+
+                    // 2) Remaining images: random from historical pools
+                    for (let i = 1; i < imageCount; i++) {
+                        if (availablePhotos.length === 0) break;
+                        const idx = Math.floor(Math.random() * availablePhotos.length);
+                        chosen.push(availablePhotos[idx]);
+                        availablePhotos.splice(idx, 1); // avoid immediate repeats
+                    }
+
+                    // --- Render into sidebar ---
+
+                    chosen.forEach(function (img) {
+                        const figure = document.createElement('figure');
+                        figure.className = 'sidebar-photo-frame';
+
+                        const el = document.createElement('img');
+                        el.className = 'sidebar-photo';
+                        el.src = img.src;
+                        el.alt = img.alt || '';
+
+                        figure.appendChild(el);
+                        sidebar.appendChild(figure);
+                    });
+                });
+            </script>
+
     </article>
 
 </div>
