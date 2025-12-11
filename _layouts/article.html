@@ -293,9 +293,9 @@ layout: default
                         if (index === 0) {
                             // FIRST IMAGE = POSTER → LINK TO POSTER PAGE
                             if (img.src.includes('happiness-club')) {
-                                link.href = "{{ '/posters/happiness-club/' | relative_url }}";
+                                link.href = "{{ '/posters/happiness-club.html' | relative_url }}";
                             } else if (img.src.includes('inheritance-poster')) {
-                                link.href = "{{ '/posters/inheritance-poster/' | relative_url }}";
+                                link.href = "{{ '/posters/inheritance-poster.html' | relative_url }}";
                             } else {
                                 // fallback if ever needed
                                 link.href = img.src;
