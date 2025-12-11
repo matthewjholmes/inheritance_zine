@@ -282,18 +282,40 @@ layout: default
 
                     // --- Render into sidebar ---
 
-                    chosen.forEach(function (img) {
+                    // --- Render into sidebar with hyperlinks ---
+
+                    chosen.forEach(function (img, index) {
                         const figure = document.createElement('figure');
                         figure.className = 'sidebar-photo-frame';
+
+                        let link = document.createElement('a');
+
+                        if (index === 0) {
+                            // FIRST IMAGE = POSTER → LINK TO POSTER PAGE
+                            if (img.src.includes('happiness-club')) {
+                                link.href = "{{ '/posters/happiness-club/' | relative_url }}";
+                            } else if (img.src.includes('inheritance-poster')) {
+                                link.href = "{{ '/posters/inheritance-poster/' | relative_url }}";
+                            } else {
+                                // fallback if ever needed
+                                link.href = img.src;
+                            }
+                        } else {
+                            // ALL OTHER IMAGES LINK DIRECTLY TO THEIR FULL IMAGE URL
+                            link.href = img.src;
+                            link.target = "_blank";
+                        }
 
                         const el = document.createElement('img');
                         el.className = 'sidebar-photo';
                         el.src = img.src;
                         el.alt = img.alt || '';
 
-                        figure.appendChild(el);
+                        link.appendChild(el);
+                        figure.appendChild(link);
                         sidebar.appendChild(figure);
                     });
+
                 });
             </script>
 
