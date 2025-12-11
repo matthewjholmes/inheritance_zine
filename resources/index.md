@@ -4,7 +4,7 @@ title: "Resources"
 ---
 
 <section class="references-index">
-  <h2>References</h2>
+  <h2>Resources</h2>
 
   <p class="resources-intro">
     Supplementary materials that provide context for the posters and articles in this zine.
